@@ -31,6 +31,13 @@ This project is licensed under the Apache License 2.0.
 - Email: uzzogabriel77@gmail.com
 - GitHub: https://github.com/Gaby-GPU
 
+## Usage
+
+To use the project, run the main script and follow the interactive menu instructions:
+
+'''bash
+python main.py
+
 ## Installation
 
 Follow these steps to set up the project:
