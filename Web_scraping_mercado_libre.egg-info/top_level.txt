@@ -1,0 +1,6 @@
+core
+data
+menus
+output
+tests
+utils
