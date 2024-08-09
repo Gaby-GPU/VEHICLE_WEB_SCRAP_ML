@@ -21,6 +21,16 @@ This project is designed to scrape vehicle listings from Mercado Libre. It colle
 - **Data Export**: Ability to export scraped data to Excel and CSV formats.
 - **Data Analysis**: Extracted data is ready for analysis and visualization.
 
+## License
+
+This project is licensed under the Apache License 2.0.
+
+## Contact
+
+Author: Gabriel Uzzo
+Email: uzzogabriel77@gmail.com
+GitHub: https://github.com/Gaby-GPU
+
 ## Installation
 
 Follow these steps to set up the project:
@@ -35,13 +45,4 @@ cd VEHICLE_WEB_SCRAP_ML
 # Install dependencies
 pip install -r requirements.txt
 
-## License
-
-This project is licensed under the Apache License 2.0.
-
-## Contact
-
-Author: Gabriel Uzzo
-Email: uzzogabriel77@gmail.com
-GitHub: https://github.com/Gaby-GPU
 
