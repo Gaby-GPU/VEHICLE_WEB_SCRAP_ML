@@ -27,9 +27,9 @@ This project is licensed under the Apache License 2.0.
 
 ## Contact
 
-Author: Gabriel Uzzo
-Email: uzzogabriel77@gmail.com
-GitHub: https://github.com/Gaby-GPU
+- Author: Gabriel Uzzo
+- Email: uzzogabriel77@gmail.com
+- GitHub: https://github.com/Gaby-GPU
 
 ## Installation
 
