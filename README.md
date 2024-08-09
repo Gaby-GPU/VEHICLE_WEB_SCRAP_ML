@@ -8,10 +8,8 @@ This project involves web scraping of the Mercado Libre e-commerce website to ex
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 ## Description
 
@@ -29,10 +27,21 @@ Follow these steps to set up the project:
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/repository-name.git
+git clone https://github.com/Gaby-GPU/VEHICLE_WEB_SCRAP_ML.git
 
 # Navigate to the project directory
-cd repository-name
+cd VEHICLE_WEB_SCRAP_ML
 
 # Install dependencies
 pip install -r requirements.txt
+
+## License
+
+This project is licensed under the Apache License 2.0.
+
+## Contact
+
+Author: Gabriel Uzzo
+Email: uzzogabriel77@gmail.com
+GitHub: https://github.com/Gaby-GPU
+
