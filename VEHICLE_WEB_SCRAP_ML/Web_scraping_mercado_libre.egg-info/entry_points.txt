@@ -1,0 +1,2 @@
+[console_scripts]
+mi_proyect = core.main:main
