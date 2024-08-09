@@ -63,5 +63,5 @@ def scrape_all_pages(max_pages=40):
         soup = scrape_page(page)
         page_data = parse_html_to_data(soup)
         all_data.extend(page_data)
-        time.sleep(2)  # Para evitar ser bloqueado por el servidor
+        time.sleep(2)  
     return all_data
