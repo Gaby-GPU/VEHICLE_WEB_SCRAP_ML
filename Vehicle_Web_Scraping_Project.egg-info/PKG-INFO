@@ -2,14 +2,14 @@ Metadata-Version: 2.1
 Name: Vehicle_Web_Scraping_Project
 Version: 0.1.0
 Summary: Vehicle web scraping project for data analysis
-Home-page: 
+Home-page: https://github.com/Gaby-GPU/VEHICLE_WEB_SCRAP_ML.git
 Author: Gabriel Páris Uzzo
 Author-email: uzzogabriel77@gmail.com
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: Apache License 2.0
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
-License-File: LICENSE.txt
+License-File: LICENSE
 Requires-Dist: requests
 Requires-Dist: beautifulsoup4
 Requires-Dist: pandas

@@ -1,4 +1,4 @@
-LICENSE.txt
+LICENSE
 README.md
 setup.py
 Vehicle_Web_Scraping_Project.egg-info/PKG-INFO
