@@ -163,6 +163,19 @@ def sort_by_km_asc(products):
     """
     return sorted(products, key=lambda x: convert_km_to_number(x['KM']))
 
+def sort_by_km_desc(products):
+    """
+    Sorts a list of products by km from lowest to highest.
+
+    Args:
+        products (list): List of dictionaries with products, where each product has a 'Price' key.
+
+    Returns:
+        list: List of products sorted by km in ascending order.
+    """
+    return sorted(products, key=lambda x: convert_km_to_number(x['KM']), reverse=True)
+
+
 
 def filter_by_name(products):
     """
@@ -187,6 +200,35 @@ def filter_by_name(products):
         else:
             print(f"Product without a valid title found: {product}")
 
+    print (desired_item_list)    
+
+    option = input("Do you want to filter products by price or kilometers? [P/K/N] \t").upper()
+    
+    try:
+        if option == "P":
+            asc_desc = input("Filter by ascending or descending price [A/D] \t").upper()
+            if asc_desc == "A":
+                desired_item_list = sort_by_price_asc(desired_item_list)
+            elif asc_desc == "D":
+                desired_item_list = sort_by_price_desc(desired_item_list)
+            else:
+                print("Invalid input for sorting order.")
+        elif option == "K":
+            asc_desc = input("Filter by ascending or descending kilometers [A/D] \t").upper()
+            if asc_desc == "A":
+                desired_item_list = sort_by_km_asc(desired_item_list)
+            elif asc_desc == "D":
+                desired_item_list = sort_by_km_desc(desired_item_list)
+            else:
+                print("Invalid input for sorting order.")
+        elif option == "N":
+            pass  
+        else:
+            print("Invalid option selected.")
+    
+    except (ValueError, KeyError) as e:
+        print(f"An error occurred: {e}")
+    
     return desired_item_list
 
 def return_to_menu():
