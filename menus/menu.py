@@ -28,7 +28,7 @@ def mainMenu():
 
         while not correct_option:
             
-            option = int(input("\n=====Welcome===== \n Choose one of the following options \n 1- Export data to Excel \n 2- Export data to CSV \n 3- Filter by name \n 4- Sort by ascending price \n 5- Sort by descending price \n 6- Sort by kilometers \n 7- Exit the program \n"))
+            option = int(input("\n=====Welcome===== \n Choose one of the following options \n 1- Export data to Excel \n 2- Export data to CSV \n 3- Filter by name \n 4- Sort by ascending price \n 5- Sort by descending price \n 6- Sort by kilometers \n 7- Exit the program \n "))
 
             if option < 1 or option > 7:
                 print("Incorrect option, please choose a number between 1 and 7")
