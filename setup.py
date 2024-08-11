@@ -15,7 +15,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'mi_proyect=core.main:main',  
+            'project_wb_ml=core.main:main',  
         ],
     },
     classifiers=[

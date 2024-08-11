@@ -69,8 +69,8 @@ def parse_html_to_data(soup):
         if year == 'N/A':
             continue
         
-        data['year'] = kilometers
-        data['KM'] = year
+        data['year'] = year
+        data['KM'] = kilometers
 
         # Location
 
