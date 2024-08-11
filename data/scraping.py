@@ -42,7 +42,7 @@ def scrape_page(page_number):
     else:
         raise Exception(f'Error al obtener la página {page_number}: {response.status_code}')
 
-def scrape_all_pages(max_pages=40):
+def scrape_all_pages(max_pages=10):
 
     """
     Scrapes data from multiple pages and compiles it into a single list.
