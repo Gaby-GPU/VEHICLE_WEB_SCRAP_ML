@@ -28,7 +28,7 @@ def mainMenu():
 
         while not correct_option:
             
-            option = int(input("\n=====Welcome===== \n Choose one of the following options \n 1- Export data to Excel \n 2- Export data to CSV \n 3- Filter by name \n 4- Sort by ascending price \n 5- Sort by descending price \n 6- Sort by kilometers \n 7- Exit the program \n "))
+            option = int(input("\n=====Welcome===== \n Choose one of the following options \n 1- Exportar a formato xlsx o csv \n 2- Export data to CSV \n 3- Filter by name \n 4- Sort by ascending price \n 5- Sort by descending price \n 6- Sort by kilometers \n 7- Exit the program \n "))
 
             if option < 1 or option > 7:
                 print("Incorrect option, please choose a number between 1 and 7")
@@ -39,6 +39,56 @@ def mainMenu():
             else:
                 correct_option = True
                 menuOptions(option)
+
+
+def export_data(data):
+
+    my_data = data
+    
+    option = int(input("Elije una opción: Excel [1], Csv [2]:  "))
+
+    if option < 1 or option > 2:
+        print("Incorrect option, please choose a number between 1 and 2")
+    if option == '1':
+        df = pd.DataFrame(my_data)
+        ex.export_to_excel(df, 'Cars.xlsx')
+        ut.return_to_menu()
+    elif option == '2':
+        df = pd.DataFrame(my_data)
+        ex.export_to_csv(df, 'Cars.csv')
+        ut.return_to_menu()
+       
+
+def filter_by(data):
+    
+    my_data = data
+    
+    option = int(input("Elije una opción: nombre [1], precio_asc [2], precio_dsc [3], kilometros_asc [4]:  "))
+
+    if option < 1 or option > 4:
+        print("Incorrect option, please choose a number between 1 and 4")    
+    if option == 1:
+        new_data = ut.filter_by_name(my_data)
+        df = pd.DataFrame(new_data)
+        print(df)
+        ut.return_to_menu()
+    elif option == 2:
+        new_data = ut.sort_by_price_asc(my_data)
+        df = pd.DataFrame(new_data)
+        print(df)
+        ut.return_to_menu()
+        # Sort by ascending price
+    elif option == 3:
+        new_data = ut.sort_by_price_desc(my_data)
+        df = pd.DataFrame(new_data)
+        print(df)
+        ut.return_to_menu()
+        # Sort by descending price
+    elif option == 4:
+        new_data = ut.sort_by_km_asc(my_data)
+        df = pd.DataFrame(new_data)
+        print(df)
+        ut.return_to_menu()
 
 def menuOptions(option):
 
@@ -63,35 +113,6 @@ def menuOptions(option):
     my_data = da.scrape_all_pages()
 
     if option == 1:
-        df = pd.DataFrame(my_data)
-        ex.export_to_excel(df, 'Cars.xlsx')
-        ut.return_to_menu()
-        # Export to Excel
+        export_data(my_data)
     elif option == 2:
-        df = pd.DataFrame(my_data)
-        ex.export_to_csv(df, 'Cars.csv')
-        ut.return_to_menu()
-        # Export to CSV
-    elif option == 3:
-        new_data = ut.filter_by_name(my_data)
-        df = pd.DataFrame(new_data)
-        print(df)
-        ut.return_to_menu()
-    elif option == 4:
-        new_data = ut.sort_by_price_asc(my_data)
-        df = pd.DataFrame(new_data)
-        print(df)
-        ut.return_to_menu()
-        # Sort by ascending price
-    elif option == 5:
-        new_data = ut.sort_by_price_desc(my_data)
-        df = pd.DataFrame(new_data)
-        print(df)
-        ut.return_to_menu()
-        # Sort by descending price
-    elif option == 6:
-        new_data = ut.sort_by_km_asc(my_data)
-        df = pd.DataFrame(new_data)
-        print(df)
-        ut.return_to_menu()
-
+        filter_by(my_data)

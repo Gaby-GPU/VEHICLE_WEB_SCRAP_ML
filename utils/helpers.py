@@ -81,18 +81,11 @@ def parse_html_to_data(soup):
 
 
         # URL
-
-        try:
-            url_tag = item.find(class_='ui-search-link')
-            if not url_tag:
-                raise ValueError("Url tag not found")
-        except ValueError:
-            url_tag = item.find(class_='poly-component__title')
-
-        if not url_tag:
-            data['Url'] = 'Title not found'
-        else:
+        url_tag = item.find(class_='ui-search-link')
+        if url_tag and url_tag.has_attr('href'):
             data['Url'] = url_tag['href']
+        else:
+            data['Url'] = 'URL not found'
 
 
 
